@@ -1,0 +1,42 @@
+
+#board {
+    width: 900px;
+    height: 900px;
+    border: 5px solid black;
+    align-self: right;
+}
+.number-square {
+    border: 5px solid lightgray;
+    text-align: center;
+    font-size: 22px;
+}
+
+.thick-right{
+    border-right: 5px solid black;
+}
+.thick-left{
+    border-left: 5px solid black;
+}
+.thick-top{
+    border-top: 5px solid black;
+}
+.thick-bottom{
+    border-bottom: 5px solid black;
+}
+
+
+#numberChooserTable{
+    margin-top: 30px;
+    background-color: grey;
+    width: 900px;
+    height: 100px;
+    display: none;
+    border: 5px solid lightgray;
+    text-align: center;
+
+}
+.number-chooser-data{
+    border: 1px solid black;
+    text-align: center;
+    padding: 39px 43.5px;
+}
