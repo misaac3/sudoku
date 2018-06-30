@@ -205,9 +205,12 @@ function findNextOpenSquare(_board, coords){//, row, col){
 
 function isValidInsert(col, row, value) {
   for (var i = 0; i < 9; i++) {
+
     if (board2D[col][i] == value || board2D[i][row] == value) {
       return false;
+      console.log("fail");
     }
+
   }
 
   var boxCol = Math.floor(col / 3) * 3;
@@ -229,7 +232,7 @@ function updateHTML(){
     for(var col = 0; col < 9; col++){
       var value = board2D[row][col];
       if(value == 0) value = " "
-      var IDString = "#b" + col.toString() + row.toString();
+      var IDString = "#b" +  row.toString() + col.toString();
       var square = document.querySelector(IDString);
       var valStr = value.toString();
       square.innerHTML = valStr;
@@ -238,3 +241,56 @@ function updateHTML(){
 
 }
 updateHTML();
+
+
+
+//this variable will update to the ID of the individual square that is clicked
+var currentID = "";
+
+//Get all the number square elements
+var numberSquares = document.querySelectorAll(".number-square");
+
+//This will add an event listener to each number-square element
+for (var i = 0; i < numberSquares.length; i++) {
+  var id = numberSquares[i].id;
+  numberSquares[i].addEventListener('click', promptNumberChooser);
+}
+
+//prompts the number chooser div when a number square is clicked
+function promptNumberChooser(event) {
+  var nct = document.querySelector("#numberChooserTable");
+  nct.style.display = "block";
+  var id = event.target.id;
+  currentID = id;
+  addEventListenersToNumberChooser();
+}
+
+//add event listeners to number prompt
+var numberChoosers = document.querySelectorAll(".number-chooser-data");
+
+function addEventListenersToNumberChooser() {;
+  for (var i = 0; i < numberChoosers.length; i++) {
+    numberChoosers[i].addEventListener('click', changeContent);
+  }
+}
+
+//changes the content of a number sqaure to the number clicked on in the nct
+function changeContent(e) {
+  var split = currentID.split("");
+  var col = split[1];
+  var row = split[2];
+  var IDString = "#" + currentID;
+  var square = document.querySelector(IDString);
+  var newContent = e.target.innerHTML;
+  console.log(newContent);
+  if (isValidInsert(col, row, newContent)) {
+    updateBoard2D(col, row, newContent);
+    square.innerHTML = newContent;
+  } else {
+    console.log("NO! BAD MOVE!");
+  }
+}
+
+function updateBoard2D(col, row, value){
+  board2D[col][row] = value;
+}
