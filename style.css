@@ -1,14 +1,20 @@
+#generateBoardBtn{
+  margin: 30px;
+}
 
 #board {
     width: 900px;
     height: 900px;
     border: 5px solid black;
     align-self: right;
+    table-layout: fixed;
 }
 .number-square {
     border: 5px solid lightgray;
     text-align: center;
     font-size: 22px;
+    width: 100px;
+    height: 100px;
 }
 
 .thick-right{
@@ -28,15 +34,23 @@
 #numberChooserTable{
     margin-top: 30px;
     background-color: grey;
-    width: 900px;
-    height: 100px;
+    width: 960px;
+    height: 105px;
     display: none;
     border: 5px solid lightgray;
     text-align: center;
 
 }
 .number-chooser-data{
-    border: 1px solid black;
+    border: 5px solid black;
     text-align: center;
     padding: 39px 43.5px;
+}
+
+.highlight{
+          /*  background-color: rgba(0, 0, 255, 0.1)	/* 50% opaque blue */
+}
+
+.highlight-focus{
+    background-color: rgba(0, 0, 255, 0.25)
 }

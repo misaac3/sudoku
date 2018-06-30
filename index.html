@@ -10,109 +10,118 @@
 </head>
 
 <body>
+  <h1 id="message">Click Below To Solve</h1>
+
   <div id="div">
 
 
-
+    <button id="consoleSolve">Testing in the console</button>
+    <br> <br>
+    <button id="printBoard2D">Print Board in console</button>
+<!--
+    <button id="generateBoardBtn">
+      generate board
+    </button>
+-->
     <table id="board">
       <tr>
-        <td id="b00" class="number-square thick-left thick-top">1</td>
-        <td id="b01" class="number-square thick-top">2</td>
-        <td id="b02" class="number-square thick-right thick-top">3</td>
-        <td id="b03" class="number-square thick-left thick-top">4</td>
-        <td id="b04" class="number-square thick-top">5</td>
-        <td id="b05" class="number-square thick-top thick-right">6</td>
-        <td id="b06" class="number-square thick-top thick-left">7</td>
-        <td id="b07" class="number-square thick-top">8</td>
-        <td id="b08" class="number-square thick-top thick-right">9</td>
+        <td id="b00" class="number-square thick-left thick-top"></td>
+        <td id="b01" class="number-square thick-top"></td>
+        <td id="b02" class="number-square thick-right thick-top"></td>
+        <td id="b03" class="number-square thick-left thick-top"></td>
+        <td id="b04" class="number-square thick-top"></td>
+        <td id="b05" class="number-square thick-top thick-right"></td>
+        <td id="b06" class="number-square thick-top thick-left"></td>
+        <td id="b07" class="number-square thick-top"></td>
+        <td id="b08" class="number-square thick-top thick-right"></td>
       </tr>
       <tr>
-        <td id="b10" class="number-square thick-left">1</td>
-        <td id="b11" class="number-square ">2</td>
-        <td id="b12" class="number-square thick-right">3</td>
-        <td id="b13" class="number-square thick-left">4</td>
-        <td id="b14" class="number-square ">5</td>
-        <td id="b15" class="number-square thick-right">6</td>
-        <td id="b16" class="number-square thick-left">7</td>
-        <td id="b17" class="number-square ">8</td>
-        <td id="b18" class="number-square thick-right">9</td>
+        <td id="b10" class="number-square thick-left"></td>
+        <td id="b11" class="number-square "></td>
+        <td id="b12" class="number-square thick-right"></td>
+        <td id="b13" class="number-square thick-left"></td>
+        <td id="b14" class="number-square "></td>
+        <td id="b15" class="number-square thick-right"></td>
+        <td id="b16" class="number-square thick-left"></td>
+        <td id="b17" class="number-square "></td>
+        <td id="b18" class="number-square thick-right"></td>
       </tr>
       <tr>
-        <td id="b20" class="number-square thick-left thick-bottom">1</td>
-        <td id="b21" class="number-square thick-bottom">2</td>
-        <td id="b22" class="number-square thick-bottom thick-right">3</td>
-        <td id="b23" class="number-square thick-bottom thick-left">4</td>
-        <td id="b24" class="number-square thick-bottom">5</td>
-        <td id="b25" class="number-square thick-bottom thick-right">6</td>
-        <td id="b26" class="number-square thick-bottom thick-left">7</td>
-        <td id="b27" class="number-square thick-bottom">8</td>
-        <td id="b28" class="number-square thick-bottom thick-right">9</td>
+        <td id="b20" class="number-square thick-left thick-bottom"></td>
+        <td id="b21" class="number-square thick-bottom"></td>
+        <td id="b22" class="number-square thick-bottom thick-right"></td>
+        <td id="b23" class="number-square thick-bottom thick-left"></td>
+        <td id="b24" class="number-square thick-bottom"></td>
+        <td id="b25" class="number-square thick-bottom thick-right"></td>
+        <td id="b26" class="number-square thick-bottom thick-left"></td>
+        <td id="b27" class="number-square thick-bottom"></td>
+        <td id="b28" class="number-square thick-bottom thick-right"></td>
       </tr>
       <tr>
-        <td id="b30" class="number-square thick-left thick-top">1</td>
-        <td id="b31" class="number-square thick-top">2</td>
-        <td id="b32" class="number-square thick-right thick-top">3</td>
-        <td id="b33" class="number-square thick-left thick-top">4</td>
-        <td id="b34" class="number-square thick-top">5</td>
-        <td id="b35" class="number-square thick-top thick-right">6</td>
-        <td id="b36" class="number-square thick-top thick-left">7</td>
-        <td id="b37" class="number-square thick-top">8</td>
-        <td id="b38" class="number-square thick-top thick-right">9</td>
+        <td id="b30" class="number-square thick-left thick-top"></td>
+        <td id="b31" class="number-square thick-top"></td>
+        <td id="b32" class="number-square thick-right thick-top"></td>
+        <td id="b33" class="number-square thick-left thick-top"></td>
+        <td id="b34" class="number-square thick-top"></td>
+        <td id="b35" class="number-square thick-top thick-right"></td>
+        <td id="b36" class="number-square thick-top thick-left"></td>
+        <td id="b37" class="number-square thick-top"></td>
+        <td id="b38" class="number-square thick-top thick-right"></td>
       </tr>
       <tr>
-        <td id="b40" class="number-square thick-left">1</td>
-        <td id="b41" class="number-square ">2</td>
-        <td id="b42" class="number-square thick-right">3</td>
-        <td id="b43" class="number-square thick-left">4</td>
-        <td id="b44" class="number-square ">5</td>
-        <td id="b45" class="number-square thick-right">6</td>
-        <td id="b46" class="number-square thick-left">7</td>
-        <td id="b47" class="number-square ">8</td>
-        <td id="b48" class="number-square thick-right">9</td>
+        <td id="b40" class="number-square thick-left"></td>
+        <td id="b41" class="number-square "></td>
+        <td id="b42" class="number-square thick-right"></td>
+        <td id="b43" class="number-square thick-left"></td>
+        <td id="b44" class="number-square "></td>
+        <td id="b45" class="number-square thick-right"></td>
+        <td id="b46" class="number-square thick-left"></td>
+        <td id="b47" class="number-square "></td>
+        <td id="b48" class="number-square thick-right"></td>
       </tr>
       <tr>
-        <td id="b50" class="number-square thick-left thick-bottom">1</td>
-        <td id="b51" class="number-square thick-bottom">2</td>
-        <td id="b52" class="number-square thick-bottom thick-right">3</td>
-        <td id="b53" class="number-square thick-bottom thick-left">4</td>
-        <td id="b54" class="number-square thick-bottom">5</td>
-        <td id="b55" class="number-square thick-bottom thick-right">6</td>
-        <td id="b56" class="number-square thick-bottom thick-left">7</td>
-        <td id="b57" class="number-square thick-bottom">8</td>
-        <td id="b58" class="number-square thick-bottom thick-right">9</td>
+        <td id="b50" class="number-square thick-left thick-bottom"></td>
+        <td id="b51" class="number-square thick-bottom"></td>
+        <td id="b52" class="number-square thick-bottom thick-right"></td>
+        <td id="b53" class="number-square thick-bottom thick-left"></td>
+        <td id="b54" class="number-square thick-bottom"></td>
+        <td id="b55" class="number-square thick-bottom thick-right"></td>
+        <td id="b56" class="number-square thick-bottom thick-left"></td>
+        <td id="b57" class="number-square thick-bottom"></td>
+        <td id="b58" class="number-square thick-bottom thick-right"></td>
       </tr>
       <tr>
-        <td id="b60" class="number-square thick-left thick-top">1</td>
-        <td id="b61" class="number-square thick-top">2</td>
-        <td id="b62" class="number-square thick-right thick-top">3</td>
-        <td id="b63" class="number-square thick-left thick-top">4</td>
-        <td id="b64" class="number-square thick-top">5</td>
-        <td id="b65" class="number-square thick-top thick-right">6</td>
-        <td id="b66" class="number-square thick-top thick-left">7</td>
-        <td id="b67" class="number-square thick-top">8</td>
-        <td id="b68" class="number-square thick-top thick-right">9</td>
+        <td id="b60" class="number-square thick-left thick-top"></td>
+        <td id="b61" class="number-square thick-top"></td>
+        <td id="b62" class="number-square thick-right thick-top"></td>
+        <td id="b63" class="number-square thick-left thick-top"></td>
+        <td id="b64" class="number-square thick-top"></td>
+        <td id="b65" class="number-square thick-top thick-right"></td>
+        <td id="b66" class="number-square thick-top thick-left"></td>
+        <td id="b67" class="number-square thick-top"></td>
+        <td id="b68" class="number-square thick-top thick-right"></td>
       </tr>
       <tr>
-        <td id="b70" class="number-square thick-left">1</td>
-        <td id="b71" class="number-square ">2</td>
-        <td id="b72" class="number-square thick-right">3</td>
-        <td id="b73" class="number-square thick-left">4</td>
-        <td id="b74" class="number-square ">5</td>
-        <td id="b75" class="number-square thick-right">6</td>
-        <td id="b76" class="number-square thick-left">7</td>
-        <td id="b77" class="number-square ">8</td>
-        <td id="b78" class="number-square thick-right">9</td>
+        <td id="b70" class="number-square thick-left"></td>
+        <td id="b71" class="number-square "></td>
+        <td id="b72" class="number-square thick-right"></td>
+        <td id="b73" class="number-square thick-left"></td>
+        <td id="b74" class="number-square "></td>
+        <td id="b75" class="number-square thick-right"></td>
+        <td id="b76" class="number-square thick-left"></td>
+        <td id="b77" class="number-square "></td>
+        <td id="b78" class="number-square thick-right"></td>
       </tr>
       <tr>
-        <td id="b80" class="number-square thick-left thick-bottom">1</td>
-        <td id="b81" class="number-square thick-bottom">2</td>
-        <td id="b82" class="number-square thick-bottom thick-right">3</td>
-        <td id="b83" class="number-square thick-bottom thick-left">4</td>
-        <td id="b84" class="number-square thick-bottom">5</td>
-        <td id="b85" class="number-square thick-bottom thick-right">6</td>
-        <td id="b86" class="number-square thick-bottom thick-left">7</td>
-        <td id="b87" class="number-square thick-bottom">8</td>
-        <td id="b88" class="number-square thick-bottom thick-right">9</td>
+        <td id="b80" class="number-square thick-left thick-bottom"></td>
+        <td id="b81" class="number-square thick-bottom"></td>
+        <td id="b82" class="number-square thick-bottom thick-right"></td>
+        <td id="b83" class="number-square thick-bottom thick-left"></td>
+        <td id="b84" class="number-square thick-bottom"></td>
+        <td id="b85" class="number-square thick-bottom thick-right"></td>
+        <td id="b86" class="number-square thick-bottom thick-left"></td>
+        <td id="b87" class="number-square thick-bottom"></td>
+        <td id="b88" class="number-square thick-bottom thick-right"></td>
       </tr>
     </table>
 
@@ -127,60 +136,17 @@
             <td id="numberChooserTd7 " class="number-chooser-data " >7</td>
             <td id="numberChooserTd8 " class="number-chooser-data " >8</td>
             <td id="numberChooserTd9 " class="number-chooser-data " >9</td>
-
         </tr>
-
-
     </table>
 
 
 </div>
 
 
-<script>
-//    console.log(1);
-//    //This will add an event listener to each number-square element
-//    var numberSquares = document.querySelectorAll("number-square ");
-//    console.log(numberSquares);
-//    for(var i = 0; i < numberSquares.length; i++){
-//        var id = numberSquares[i].id;
-//        numberSquares[i].addEventListener('click', promptNumberChooser);
-//    }
-//
-//    function promptNumberChooser() {
-//        document.getElementById("numberChooserTable ").style.display = "block ";
-//        console.log(1);
-//    }
-//
-//
-////    var numberChooserShown = false;
-////    var nct = document.getElementById("numberChooserTable ");
-//////    nct.style.display = "none ";
-//////    nct.style.border = "5px solid lightgray ";
-//////    nct.style.textAlign = "center ";
-////
-////    function changeTableData(id) {
-////        if (!numberChooserShown) {
-////
-//////            nct.style.display = "block ";
-//////            nct.style.border = "5px solid lightgray ";
-//////            nct.style.textAlign = "center ";
-////            console.log(document.querySelector("#numberChooserTable ").outerHTML);
-////            var numberChooserDataArray = document.querySelectorAll(".number-chooser-data ");
-////
-////            console.log("TEST: " + numberChooserDataArray[3]);
-////        }
-////    }
-////    function chooseANumber(numberChooserDataArray) {
-////
-////
-////
-////    }
-//
 
-
-</script>
-
+<script type="text/javascript " src="solve.js "></script>
+<!--
 <script type="text/javascript " src="script.js "></script>
+-->
 </body>
 </html>
