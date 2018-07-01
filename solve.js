@@ -94,6 +94,19 @@ var board2D =[
 //   [0, 0, 3, 0, 0, 0, 0, 0, 4]
 // ];
 
+var board2D =[
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0]
+];
+
+
 //printBoard2D();
 function printBoard2D(){
   var str = "___________________\n";
@@ -241,56 +254,3 @@ function updateHTML(){
 
 }
 updateHTML();
-
-
-
-//this variable will update to the ID of the individual square that is clicked
-var currentID = "";
-
-//Get all the number square elements
-var numberSquares = document.querySelectorAll(".number-square");
-
-//This will add an event listener to each number-square element
-for (var i = 0; i < numberSquares.length; i++) {
-  var id = numberSquares[i].id;
-  numberSquares[i].addEventListener('click', promptNumberChooser);
-}
-
-//prompts the number chooser div when a number square is clicked
-function promptNumberChooser(event) {
-  var nct = document.querySelector("#numberChooserTable");
-  nct.style.display = "block";
-  var id = event.target.id;
-  currentID = id;
-  addEventListenersToNumberChooser();
-}
-
-//add event listeners to number prompt
-var numberChoosers = document.querySelectorAll(".number-chooser-data");
-
-function addEventListenersToNumberChooser() {;
-  for (var i = 0; i < numberChoosers.length; i++) {
-    numberChoosers[i].addEventListener('click', changeContent);
-  }
-}
-
-//changes the content of a number sqaure to the number clicked on in the nct
-function changeContent(e) {
-  var split = currentID.split("");
-  var col = split[1];
-  var row = split[2];
-  var IDString = "#" + currentID;
-  var square = document.querySelector(IDString);
-  var newContent = e.target.innerHTML;
-  console.log(newContent);
-  if (isValidInsert(col, row, newContent)) {
-    updateBoard2D(col, row, newContent);
-    square.innerHTML = newContent;
-  } else {
-    console.log("NO! BAD MOVE!");
-  }
-}
-
-function updateBoard2D(col, row, value){
-  board2D[col][row] = value;
-}

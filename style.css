@@ -47,8 +47,8 @@
     padding: 39px 43.5px;
 }
 
-.highlight{
-          /*  background-color: rgba(0, 0, 255, 0.1)	/* 50% opaque blue */
+.highlight-square{
+  background-color: rgba(0, 0, 255, 0.1)	/* 50% opaque blue */
 }
 
 .highlight-focus{
