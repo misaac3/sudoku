@@ -16,6 +16,9 @@ function changeSquareThroughKeys(e){
     var col = split[2];
 
     switch (e.code) {
+      case "Digit0":
+      changeContentThroughType(0);
+      break;
       case "Digit1":
       if(isValidInsert(row, col, 1)){
         changeContentThroughType(1);
@@ -131,9 +134,6 @@ function moveFocus(e){
     default:
 
   }
-
-
-
 }
 
 
@@ -188,6 +188,7 @@ function changeContent(e) {
     square.innerHTML = newContent;
   } else {
     console.log("NO! BAD MOVE!");
+    alert("Invalid Move");
   }
 }
 function changeContentThroughType(num) {
@@ -200,8 +201,11 @@ function changeContentThroughType(num) {
   //var newContent = e.target.innerHTML;
   var newContent = num;
   console.log(newContent);
-  if (isValidInsert(row, col, newContent)) {
+  if (num == 0 || isValidInsert(row, col, newContent)) {
     updateBoard2D(row, col, newContent);
+    if(num == 0){
+      newContent = "";
+    }
     square.innerHTML = newContent;
   } else {
     console.log("NO! BAD MOVE!");
