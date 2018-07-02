@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Sudoku</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   <style>
   </style>
 </head>
@@ -15,20 +16,41 @@
   <div id="div">
 
 
-    <button id="consoleSolve">Solve Puzzle</button>
-    <br> <br>
+    <button id="consoleSolve" class="button">Solve Puzzle</button>
+    <br>
     <button id="printBoard2D">Print Board in console</button>
-    <br> <br>
+    <br>
     <button id="generateBoardBtn">Click to generate board</button>
-<!--
-    <button id="generateBoardBtn">
-      generate board
-    </button>
--->
+    <br>
+    <button id="togglePossVals">Click to show or hide Possible Values</button>
+    <br>
+    <button id="initializePossVals">Click here to generate Possible Values</button>
+
     <table id="board">
       <tr>
         <td id="b00" class="number-square thick-left thick-top"></td>
-        <td id="b01" class="number-square thick-top"></td>
+        <td id="b01" class="number-square thick-top">
+
+          <!--<table id="test-table">
+             <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+          </table> -->
+
+
+        </td>
         <td id="b02" class="number-square thick-right thick-top"></td>
         <td id="b03" class="number-square thick-left thick-top"></td>
         <td id="b04" class="number-square thick-top"></td>
@@ -146,9 +168,11 @@
 
 
 
-<script type="text/javascript " src="generateBoard.js "></script>
 <script type="text/javascript " src="solve.js "></script>
 <script type="text/javascript " src="changeBoard.js "></script>
+<script type="text/javascript " src="generatePossibleValues.js "></script>
+<script type="text/javascript " src="generateBoard.js "></script>
+
 <!--
 <script type="text/javascript " src="script.js "></script>
 -->

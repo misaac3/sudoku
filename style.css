@@ -1,56 +1,109 @@
-#generateBoardBtn{
-  margin: 30px;
+
+button {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 #board {
-    width: 900px;
-    height: 900px;
-    border: 5px solid black;
-    align-self: right;
-    table-layout: fixed;
+  width: 900px;
+  height: 900px;
+  border: 5px solid black;
+  align-self: right;
+  table-layout: fixed;
 }
+
 .number-square {
-    border: 5px solid lightgray;
-    text-align: center;
-    font-size: 22px;
-    width: 100px;
-    height: 100px;
+  border: 5px solid lightgray;
+  text-align: center;
+  font-size: 72px;
+  width: 100px;
+  height: 100px;
 }
 
-.thick-right{
-    border-right: 5px solid black;
+.thick-right {
+  border-right: 5px solid black;
 }
-.thick-left{
-    border-left: 5px solid black;
+
+.thick-left {
+  border-left: 5px solid black;
 }
-.thick-top{
-    border-top: 5px solid black;
+
+.thick-top {
+  border-top: 5px solid black;
 }
-.thick-bottom{
-    border-bottom: 5px solid black;
+
+.thick-bottom {
+  border-bottom: 5px solid black;
+}
+
+#numberChooserTable {
+  margin-top: 30px;
+ /* background-color: grey;
+  width: 960px;
+  height: 105px; */
+  display: none;
+  /* border: 5px solid lightgray; */
+  text-align: center;
+}
+
+.number-chooser-data {
+  border: 5px solid black;
+  text-align: center;
+  padding: 39px 43.5px;
 }
 
 
-#numberChooserTable{
-    margin-top: 30px;
-    background-color: grey;
-    width: 960px;
-    height: 105px;
-    display: none;
-    border: 5px solid lightgray;
-    text-align: center;
+
+.highlight-square {
+  background-color: rgba(0, 0, 255, 0.1)/* 50% opaque blue */
 
 }
-.number-chooser-data{
-    border: 5px solid black;
-    text-align: center;
-    padding: 39px 43.5px;
+.del-in-square{
+  color: white;
+  /* display: none; */
+}
+.del-in-selected-square{
+  color: white;
+  /* display: none; */
 }
 
-.highlight-square{
-  background-color: rgba(0, 0, 255, 0.1)	/* 50% opaque blue */
+
+.highlight-focus {
+  background-color: rgba(0, 0, 255, 0.25)
 }
 
-.highlight-focus{
-    background-color: rgba(0, 0, 255, 0.25)
+.square-td{
+  text-align: center;
+  border: .5px solid red;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* .table-in-square{
+width: 90%;
+border: 1px solid black;
+margin-left: auto;
+margin-right: auto;
+color: grey;
+background-color: white;
+display: none;
+} */
+
+.test-table{
+  font-size: 22px;
+  width: 90%;
+  height: 90%;
+  /* border: 1px solid red; */
+  align-self: center;
+  margin-left:auto;
+  margin-right:auto;
+  color: grey;
+  background-color: white;
+  /* display: none; */
+}
+
+.del{
+  color: white;
 }

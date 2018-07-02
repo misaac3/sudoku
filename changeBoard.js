@@ -185,7 +185,10 @@ function changeContent(e) {
   console.log(newContent);
   if (isValidInsert(row, col, newContent)) {
     updateBoard2D(row, col, newContent);
+    // updateAllPossVals();
+    // updateAllPossValTables();
     square.innerHTML = newContent;
+    console.log('triggered changeContent');
   } else {
     console.log("NO! BAD MOVE!");
     alert("Invalid Move");
@@ -206,6 +209,11 @@ function changeContentThroughType(num) {
     if(num == 0){
       newContent = "";
     }
+    // updateAllPossVals();
+    // updateAllPossValTables();
+
+    updateAllPossVals();
+    updateAllPossValTables();
     square.innerHTML = newContent;
   } else {
     console.log("NO! BAD MOVE!");
