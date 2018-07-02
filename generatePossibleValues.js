@@ -11,6 +11,10 @@ for (var i = 0; i < possVals.length; i++) {
 var tablesShowing = false;
 var togglePossValsBtn = document.querySelector('#togglePossVals');
 togglePossValsBtn.addEventListener('click', function(){
+  if(!possValsInitialized){
+    initAllPossValTables();
+
+  }
   if(tablesShowing){
     var tables = document.querySelectorAll(".test-table");
   for (var i = 0; i < tables.length; i++) {
@@ -31,14 +35,6 @@ togglePossValsBtn.addEventListener('click', function(){
 
 })
 
-
-var initPossValBtn = document.querySelector("#initializePossVals");
-initPossValBtn.addEventListener("click", function(){
-  if(!possValsInitialized){
-    initAllPossValTables();
-
-  }
-});
 
 
 var str = "";
